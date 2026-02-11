@@ -1,6 +1,8 @@
+import { useRouter } from "expo-router";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function Index() {
+  const router = useRouter()
   return (
     <View
       style={{
@@ -9,7 +11,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <TouchableOpacity style={styles.button} >
+      <TouchableOpacity style={styles.button} onPress={() => router.push("/login")}>
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
     </View>
