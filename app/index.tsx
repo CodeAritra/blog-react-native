@@ -1,32 +1,16 @@
 import { useRouter } from "expo-router";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
+import "../global.css"
 
 export default function Index() {
   const router = useRouter()
   return (
     <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+      className="flex-1 justify-center items-center"
     >
-      <TouchableOpacity style={styles.button} onPress={() => router.push("/login")}>
-        <Text style={styles.buttonText}>Login</Text>
+      <TouchableOpacity className="bg-[#111] p-4 rounded-xl" onPress={() => router.push("/login")}>
+        <Text className="text-[#fff] text-xl font-bold">Login</Text>
       </TouchableOpacity>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  button: {
-    backgroundColor: "#111",
-    padding: 14,
-    borderRadius: 8
-  },
-  buttonText: {
-    color: "#fff",
-    fontSize: 16,
-    fontWeight: "500",
-  },
-})
