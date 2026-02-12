@@ -6,11 +6,11 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 export default function RootLayout() {
   return (
     <SafeAreaProvider>
-        <StatusBar hidden /> 
+      <StatusBar hidden />
       <Stack
         screenOptions={{
           headerShown: false,
-           animation: "slide_from_right",
+          animation: "slide_from_right",
         }}
       />
     </SafeAreaProvider>
